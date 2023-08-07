@@ -15,7 +15,7 @@ node{
   }
 
   stage('5Deploy'){
-    deploy adapters: [tomcat9(credentialsId: 'tomcatID', path: '', url: 'http://3.86.155.190:8080/')], contextPath: null, war: 'target/*war'
+    deploy adapters: [tomcat9(credentialsId: 'tomcatID', path: '', url: 'http://3.85.146.60:8080/')], contextPath: null, war: 'target/*war'
   
   }
  
@@ -26,7 +26,7 @@ input message: 'applicaion ready for deployment, please review and approve'
 }
 
 stage('7DeployToProd'){
-   deploy adapters: [tomcat9(credentialsId: 'tomcatID', path: '', url: 'http://3.86.155.190:8080/')], contextPath: null, war: 'target/*war' 
+   deploy adapters: [tomcat9(credentialsId: 'tomcatID', path: '', url: 'http://3.85.146.60:8080/')], contextPath: null, war: 'target/*war' 
   }
 
 }
